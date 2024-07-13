@@ -4,7 +4,8 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python3 --version'
-                sh 'pip install --user flask'
+                sh 'pip install --upgrade pip --user'
+                sh 'pip install flask  --user'
                 sh 'flask run --host=0.0.0.0'
             }
         }
