@@ -5,7 +5,6 @@ pipeline {
             steps {
                 script {
                     def cmd = '#!/bin/bash\n' +
-                        'ssh-add ~/.ssh/github\n'+
                         'cd ~/app/test\n'+
                         'git pull origin main\n'+
                         'docker rm -f test\n' +
