@@ -1,5 +1,5 @@
 pipeline {
-    agent { dockerfile true }
+    agent { dockerfile true  args "-p 5000:5000"}
     stages {
         stage('deployment') {
             steps {
