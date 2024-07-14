@@ -8,5 +8,5 @@ def hello_world():
     return "<p>Hello, World!</p>"
 
 @app.route("/fuck")
-def hello_world():
+def fuck():
     return "<p>Fuck!</p>"
