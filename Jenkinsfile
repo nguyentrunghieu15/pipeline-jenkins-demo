@@ -1,12 +1,10 @@
 pipeline {
-    agent { docker { image 'python:alpine3.19' } }
+    agent { dockerfile true }
     stages {
         stage('build') {
             steps {
                 sh 'python3 --version'
-                sh 'pip install --upgrade pip'
-                sh 'pip install --user flask'
-                sh 'flask run --host=0.0.0.0'
+                sh 'flask --app /app/app.py run --host=0.0.0.0'
             }
         }
     }
